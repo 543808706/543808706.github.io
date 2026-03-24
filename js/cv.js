@@ -1,100 +1,88 @@
 /**
  * CV Page JavaScript
- * This file handles the functionality for the CV page
- * including skills visualization, project modals, and animations.
+ * Handles skill visualization, project modals, and scroll animations.
  */
 
-$(document).ready(function() {
-    // Skill data for visualization
+$(document).ready(function () {
+
     const skills = [
-        { name: "Java", level: 78 },
-        { name: "HTML/CSS", level: 90 },
-        { name: "JavaScript", level: 75 },
-        { name: "C++", level: 70 },
-        { name: "Python", level: 85 },
-        { name: "SQL", level: 80 }
+        { name: "JavaScript / TypeScript", level: 85 },
+        { name: "React / HTML / CSS",      level: 88 },
+        { name: "Python",                  level: 82 },
+        { name: "SQL / Databases",         level: 80 },
+        { name: "Java",                    level: 78 },
+        { name: "C# / .NET",              level: 68 }
     ];
 
-    // Project details data - Updated based on PDF resume
     const projectDetails = {
-        uno: {
-            title: "UNO Card Game Java System",
-            description: "A complete Java implementation of the classic UNO card game with object-oriented design patterns.",
-            responsibilities: [
-                "Designed and implemented card classes and core game logic with 1,500+ lines of code",
-                "Applied object-oriented design patterns to enhance code maintainability and scalability",
-                "Conducted comprehensive integration and unit testing",
-                "Authored technical documentation"
-            ],
-            technologies: ["Java", "OOP Design Patterns", "JUnit", "Maven"],
-            challenges: "The main challenge was implementing the complex UNO rules and special card actions while maintaining clean, maintainable code architecture through object-oriented design principles.",
-            achievements: "Successfully delivered a fully functional UNO game system with comprehensive testing coverage and clear technical documentation."
-        },
         news: {
-            title: "News Management Web System",
-            description: "A responsive web-based news management system featuring modern front-end architecture and optimized performance.",
+            title: "Full-Stack News Management Web System",
+            description: "A production-grade multi-page CMS built with React, TypeScript, Node.js, and MySQL — covering full-stack development from database design to responsive UI.",
             responsibilities: [
-                "Led front-end architecture design using HTML5, CSS3, and JavaScript",
-                "Designed UI for homepage and 5 sub-pages, improving page load speed by 20%",
-                "Managed visual design and asset collection to ensure aesthetic appeal and user-friendliness",
-                "Implemented responsive design for cross-device compatibility"
+                "Designed a normalised MySQL relational database schema and implemented a Node.js REST API backend",
+                "Built a React/TypeScript front-end with a reusable typed component library, client-side state management, and async API integration with error and loading-state handling",
+                "Engineered accessible, responsive layouts using semantic HTML5 and CSS3 — WCAG-compliant colour contrast and keyboard navigability throughout",
+                "Optimised asset loading and rendering pipeline, reducing page load time by 20%",
+                "Maintained full codebase in Git with feature-branching workflow"
             ],
-            technologies: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-            challenges: "Balancing aesthetic appeal with performance optimization while ensuring a consistent user experience across all pages and devices.",
-            achievements: "Achieved a 20% improvement in page load speed while maintaining high visual quality and user-friendliness across all pages."
+            technologies: ["React", "TypeScript", "Node.js", "MySQL", "REST API", "HTML5", "CSS3", "Git"],
+            challenges: "Balancing a clean MVC-style separation of concerns across data access, business logic, and UI layers while keeping TypeScript types consistent end-to-end.",
+            achievements: "Delivered a fully functional CMS with a 20% page load improvement, cross-browser compatibility, and a reusable typed component library."
+        },
+        uno: {
+            title: "UNO Card Game Engine",
+            description: "A 1,500+ line Java OO engine implementing the full UNO ruleset, built with strict TDD and industry-standard design patterns.",
+            responsibilities: [
+                "Architected core game logic using SOLID principles and Strategy, Observer, and Factory design patterns",
+                "Kept core game logic fully decoupled from I/O and UI concerns — analogous to hexagonal (ports and adapters) architecture",
+                "Applied strict Test-Driven Development (TDD) with JUnit — wrote failing tests first, implemented to pass, then refactored",
+                "Achieved comprehensive branch coverage across all game-state transitions, special cards, and multi-player edge cases",
+                "Produced full developer-facing documentation including class diagrams and API references"
+            ],
+            technologies: ["Java", "OOP", "SOLID Principles", "Design Patterns", "TDD", "JUnit", "Maven"],
+            challenges: "Implementing complex UNO special-card interactions while maintaining clean architecture and 100% testable business logic.",
+            achievements: "Delivered a maintainable, well-tested engine with high branch coverage and complete technical documentation."
         },
         plant: {
-            title: "Plant Identification Android System",
-            description: "An intelligent Android application that uses image recognition to identify plant species with high accuracy.",
+            title: "Plant Identification Android App",
+            description: "An intelligent Android application using ML image recognition to identify plant species, with a focus on API integration and agile team delivery.",
             responsibilities: [
-                "Served as product manager, conducting requirements analysis and delivering Product Requirements Document (PRD)",
-                "Completed feasibility analysis for 10+ core features, coordinated development resources",
-                "Designed plant recognition algorithm integration solution, improving identification accuracy to 85%",
-                "Managed project timeline and stakeholder communication"
+                "Served as Product Manager — led requirements workshops, produced a full PRD, and performed feasibility analysis for 10+ core features",
+                "Designed and built the ML REST API integration layer: structured JSON request/response schemas, implemented async callbacks, error handling, and retry logic",
+                "Optimised ML pre-processing pipeline to achieve 85% plant identification accuracy",
+                "Coordinated a 4-person agile team through sprint planning, code reviews, and release management across the full SDLC"
             ],
-            technologies: ["Android", "Product Management", "ML Integration", "API Design"],
-            challenges: "Coordinating development resources while ensuring the plant recognition algorithm integration met the 85% accuracy target across diverse plant species.",
-            achievements: "Successfully delivered a product with 85% plant identification accuracy and comprehensive feature set through effective product management and technical coordination."
+            technologies: ["Android Studio", "Java", "REST API", "ML Integration", "Agile / Scrum", "JSON"],
+            challenges: "Achieving the 85% accuracy target required careful optimisation of image pre-processing and confidence thresholds in the ML pipeline.",
+            achievements: "Delivered a fully functional app with 85% identification accuracy on time, through effective product management and technical coordination."
         },
         maze: {
-            title: "Maze Game Unity System",
-            description: "A 3D maze game built with Unity featuring engaging gameplay mechanics and optimized user experience.",
+            title: "3D Maze Game",
+            description: "A 3D Unity game featuring a modular item system, physics-based interactions, and Blender-created assets — iterated through agile playtesting sprints.",
             responsibilities: [
-                "Developed game item system using Unity engine and C# scripting, implementing 5 item types",
-                "Created 3D models and animations to optimize gameplay, increasing user retention rate by 40%",
-                "Led 2 development iterations, refining game balance and playability based on testing feedback",
-                "Implemented player feedback mechanisms and performance optimizations"
+                "Developed a modular item system in C# with 5 item types (pick-ups, traps, power-ups, keys, consumables) using Unity's component architecture and ScriptableObjects",
+                "Decoupled game logic from rendering and physics using Unity's event system — mirroring dependency injection patterns",
+                "Created and rigged 3D models and skeletal animations in Blender; integrated physics-based interactions maintaining stable 60fps",
+                "Led 2 iterative development sprints incorporating playtesting feedback to refine game balance and UX"
             ],
-            technologies: ["Unity", "C#", "3D Modeling", "Game Design"],
-            challenges: "Creating balanced and engaging gameplay mechanics while optimizing performance across different devices and maintaining high user retention.",
-            achievements: "Achieved a 40% increase in user retention rate through iterative development and gameplay optimization based on user testing feedback."
+            technologies: ["Unity", "C#", "Blender", "Physics Engine", "Component Architecture", "Agile Sprints"],
+            challenges: "Maintaining clean decoupled architecture in C# while integrating complex Unity physics and animation systems.",
+            achievements: "Increased player retention by 40% through iterative UX and game-balance improvements driven by playtesting data."
         }
     };
 
-    // Initialize the page
     function initialize() {
-        // Load skill bars
         loadSkillBars();
-        
-        // Setup profile image animation
         setupProfileImage();
-        
-        // Set up project modal functionality
         setupProjectModals();
-        
-        // Animate elements on scroll
         setupScrollAnimations();
     }
 
-    // Load skill bars visualization
     function loadSkillBars() {
         const $skillBars = $('#skillBars');
-        
-        // Create skill bars for each skill
         skills.forEach(skill => {
             const colorClass = getSkillColorClass(skill.level);
-            
-            const skillBar = `
+            $skillBars.append(`
                 <div class="skill-bar">
                     <div class="skill-bar-header">
                         <span class="skill-name">${skill.name}</span>
@@ -104,21 +92,15 @@ $(document).ready(function() {
                         <div class="skill-progress-bar ${colorClass}" style="width: 0%"></div>
                     </div>
                 </div>
-            `;
-            
-            $skillBars.append(skillBar);
+            `);
         });
-        
-        // Animate skill bars after a short delay
         setTimeout(() => {
-            $('.skill-progress-bar').each(function(index) {
-                const level = skills[index].level;
-                $(this).css('width', `${level}%`);
+            $('.skill-progress-bar').each(function (i) {
+                $(this).css('width', `${skills[i].level}%`);
             });
         }, 500);
     }
 
-    // Get color class based on skill level
     function getSkillColorClass(level) {
         if (level >= 85) return 'bg-success';
         if (level >= 70) return 'bg-info';
@@ -126,85 +108,54 @@ $(document).ready(function() {
         return 'bg-danger';
     }
 
-    // Set up profile image animations and placeholder
     function setupProfileImage() {
-        // Use a placeholder image if no profile image is available
-        const $profileImage = $('#profileImage');
-        
-        // Handle image error by setting a placeholder
-        $profileImage.on('error', function() {
-            $(this).attr('src', 'https://via.placeholder.com/200x200?text=Tianyu+Li');
+        const $img = $('#profileImage');
+        $img.on('error', function () {
+            $(this).attr('src', 'https://ui-avatars.com/api/?name=Tianyu+Li&size=200&background=4a6baf&color=fff&bold=true');
         });
-        
-        // Try to set the image source
-        if (!$profileImage.attr('src')) {
-            $profileImage.attr('src', 'https://via.placeholder.com/200x200?text=Tianyu+Li');
+        if (!$img.attr('src') || $img.attr('src') === '') {
+            $img.trigger('error');
         }
-        
-        // Add pulse animation on hover
-        $profileImage.parent().hover(
-            function() { $profileImage.addClass('pulse'); },
-            function() { $profileImage.removeClass('pulse'); }
+        $img.parent().hover(
+            function () { $img.addClass('pulse'); },
+            function () { $img.removeClass('pulse'); }
         );
     }
 
-    // Set up project modal functionality
     function setupProjectModals() {
-        $('.project-details-btn').on('click', function() {
-            const projectId = $(this).parent().data('project');
-            const projectData = projectDetails[projectId];
-            
-            // Fill modal with project data
-            $('#projectModalLabel').text(projectData.title);
-            
-            const modalContent = `
+        $('.project-details-btn').on('click', function () {
+            const projectId = $(this).closest('[data-project]').data('project');
+            const d = projectDetails[projectId];
+            if (!d) return;
+
+            $('#projectModalLabel').text(d.title);
+            $('#projectModalBody').html(`
                 <div class="project-modal-content">
-                    <p class="project-description"><strong>${projectData.description}</strong></p>
-                    
+                    <p><strong>${d.description}</strong></p>
                     <h4>Key Responsibilities</h4>
-                    <ul class="project-responsibilities">
-                        ${projectData.responsibilities.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                    
+                    <ul>${d.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
                     <h4>Technologies Used</h4>
-                    <div class="project-technologies mb-3">
-                        ${projectData.technologies.map(tech => `<span class="skill-tag">${tech}</span>`).join('')}
-                    </div>
-                    
-                    <h4>Challenges & Solutions</h4>
-                    <p>${projectData.challenges}</p>
-                    
-                    <h4>Key Achievements</h4>
-                    <p>${projectData.achievements}</p>
+                    <div class="mb-3">${d.technologies.map(t => `<span class="skill-tag me-1 mb-1 d-inline-block">${t}</span>`).join('')}</div>
+                    <h4>Challenge</h4>
+                    <p>${d.challenges}</p>
+                    <h4>Key Achievement</h4>
+                    <p>${d.achievements}</p>
                 </div>
-            `;
-            
-            $('#projectModalBody').html(modalContent);
-            
-            // Show the modal
-            const projectModal = new bootstrap.Modal(document.getElementById('projectModal'));
-            projectModal.show();
+            `);
+            new bootstrap.Modal(document.getElementById('projectModal')).show();
         });
     }
 
-    // Set up animations for elements when they scroll into view
     function setupScrollAnimations() {
-        // Add fade-in class to sections as they scroll into view
-        $(window).on('scroll', function() {
-            $('.cv-section').each(function() {
-                const sectionTop = $(this).offset().top;
-                const scrollPosition = $(window).scrollTop() + $(window).height() * 0.8;
-                
-                if (scrollPosition > sectionTop && !$(this).hasClass('fade-in')) {
+        $(window).on('scroll', function () {
+            $('.cv-section').each(function () {
+                if ($(window).scrollTop() + $(window).height() * 0.85 > $(this).offset().top) {
                     $(this).addClass('fade-in');
                 }
             });
         });
-        
-        // Trigger scroll event once to check initial visible elements
         $(window).trigger('scroll');
     }
 
-    // Initialize the page
     initialize();
 });
