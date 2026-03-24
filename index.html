@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>李天宇 - 个人简历</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cv.css">
 </head>
@@ -16,17 +13,14 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="index.html">个人简历</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">中文简历</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cv.html">English CV</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">中文简历</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">English CV</a></li>
                 </ul>
             </div>
         </div>
@@ -36,34 +30,39 @@
         <header class="cv-header">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-4 text-center">
+                    <div class="col-md-3 text-center mb-3 mb-md-0">
                         <div class="profile-image-container">
                             <img src="img/profile.jpg" alt="李天宇" class="profile-image" id="profileImageCn">
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <h1 class="cv-name">李天宇</h1>
+                        <p class="cv-tagline mb-3">全栈开发 &nbsp;·&nbsp; 数据分析 &nbsp;·&nbsp; 用户体验研究</p>
                         <div class="contact-info">
                             <div class="contact-item">
                                 <i class="fas fa-phone"></i>
-                                <span>17357192319</span>
+                                <span>+61 461 171 177</span>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-envelope"></i>
-                                <span>543808706@qq.com</span>
+                                <a href="mailto:lty543808706@gmail.com" style="color:inherit;">lty543808706@gmail.com</a>
                             </div>
                             <div class="contact-item">
-                                <i class="fas fa-venus-mars"></i>
-                                <span>男</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Perth, WA, 澳大利亚</span>
                             </div>
                             <div class="contact-item">
                                 <i class="fas fa-user-graduate"></i>
-                                <span>应届毕业生</span>
+                                <span>应届毕业生 — 信息技术硕士，西澳大学（2025年12月）</span>
                             </div>
                         </div>
-                        <div class="social-links">
-                            <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                            <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <div class="social-links mt-2">
+                            <a href="https://www.linkedin.com/in/tianyu-li-7a562b31b" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/543808706" target="_blank" rel="noopener" class="social-link" title="GitHub — 543808706 (lty)">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -74,20 +73,25 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <section class="cv-section" id="personal-summary">
+
+                        <!-- 个人总结 -->
+                        <section class="cv-section fade-in" id="personal-summary">
                             <h2 class="section-title">📋 个人总结</h2>
                             <div class="section-content">
-                                <p>具有扎实的软件工程基础和全栈开发能力，擅长前端开发、数据分析和用户体验设计。在跨文化环境中完成多个技术项目和社会影响力项目，具备较强的问题分析与解决能力。注重用户需求，致力于通过技术创新解决实际问题。积极进取，善于团队协作，寻求在软件开发或数据分析领域发挥专业技能的机会。</p>
-                                
+                                <p>
+                                    西澳大学信息技术硕士应届毕业生（2025年12月），具备全栈开发、数据分析与用户体验研究的综合技术背景。
+                                    在实习期间通过数据驱动的可及性研究，实现用户任务完成率<strong>提升35%</strong>的可量化成果。
+                                    熟练掌握 <strong>JavaScript、TypeScript、React、Node.js、C#、Python 及 SQL</strong>，
+                                    具有OOP、设计模式、TDD及敏捷开发的实践经验。致力于构建包容、无障碍且工程质量高的数字产品。
+                                </p>
                                 <div class="skills-visualization mt-4">
                                     <h3>技能概览</h3>
-                                    <div class="skill-bars" id="skillBarsCn">
-                                        <!-- Skill bars will be generated by JavaScript -->
-                                    </div>
+                                    <div class="skill-bars" id="skillBarsCn"></div>
                                 </div>
                             </div>
                         </section>
 
+                        <!-- 教育经历 -->
                         <section class="cv-section" id="education">
                             <h2 class="section-title">🎓 教育经历</h2>
                             <div class="section-content">
@@ -96,9 +100,9 @@
                                         <div class="timeline-marker"></div>
                                         <div class="timeline-content">
                                             <h3>信息技术硕士</h3>
-                                            <h4>西澳大学 | QS世界排名前100</h4>
-                                            <p class="timeline-date">2024.02 - 2025.12</p>
-                                            <p><strong>核心课程：</strong>网络安全、Python编程、数据分析与决策、数据库管理系统、计算建模、物联网、供应链分析、面向对象编程、软件需求与设计、敏捷Web开发、高性能计算、云计算</p>
+                                            <h4>西澳大学 &nbsp;|&nbsp; QS世界排名前100</h4>
+                                            <p class="timeline-date">2024.02 – 2025.12</p>
+                                            <p><strong>核心课程：</strong>敏捷Web开发、软件需求与设计、数据分析与决策、数据库管理系统、Python编程、云计算、网络安全、高性能计算、物联网、供应链分析、面向对象编程、计算建模</p>
                                         </div>
                                     </div>
                                     <div class="timeline-item">
@@ -106,81 +110,75 @@
                                         <div class="timeline-content">
                                             <h3>软件工程学士</h3>
                                             <h4>浙江工业大学</h4>
-                                            <p class="timeline-date">2019.09 - 2023.06</p>
-                                            <p><strong>核心课程：</strong>C++面向对象编程、计算机网络原理、嵌入式系统、数据结构与算法、计算机组成原理、实时系统与操作系统、应用软件项目管理、游戏开发基础、编译原理、软件架构与质量、网络程序设计</p>
+                                            <p class="timeline-date">2019.09 – 2023.06</p>
+                                            <p><strong>核心课程：</strong>C++面向对象编程、数据结构与算法、计算机网络、嵌入式系统、操作系统、软件项目管理、游戏开发、编译原理、软件架构与质量、网络程序设计</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
 
+                        <!-- 实习经历 -->
                         <section class="cv-section" id="work-experience">
                             <h2 class="section-title">💼 实习经历</h2>
                             <div class="section-content">
                                 <div class="experience-item">
                                     <div class="experience-header">
-                                        <h3>研究与IT实习生 - 智障人士网站导航设计师</h3>
-                                        <h4>McCusker Centre for Citizenship实习项目 | Developmental Disability WA</h4>
-                                        <p class="experience-date">2025.02 - 2025.05</p>
+                                        <h3>研究与IT实习生 — 网页无障碍与用户体验设计</h3>
+                                        <h4>McCusker Centre for Citizenship &nbsp;|&nbsp; Developmental Disability WA</h4>
+                                        <p class="experience-date">2025.02 – 2025.05</p>
                                     </div>
                                     <ul class="experience-details">
-                                        <li>与<strong>15+名</strong>智障人士进行用户访谈，评估3个主流网站的可读性和可用性，收集<strong>200+条</strong>用户反馈数据</li>
-                                        <li>组织并主持<strong>8场</strong>网站测试会议，分析用户与不同Web界面的交互行为，识别<strong>20+个</strong>关键可用性问题</li>
-                                        <li>撰写详细的可访问性评估报告（<strong>30页</strong>），提出<strong>12项</strong>具体改进建议，为开发团队提供最佳实践指导</li>
-                                        <li>与跨职能开发团队协作，优化网站导航结构，将用户任务完成率<strong>提升35%</strong></li>
-                                        <li>参与制定包容性设计标准文档，推动数字无障碍化建设，相关成果被机构采纳应用</li>
+                                        <li>从零设计并实施<strong>结构化数据采集框架</strong>，跨3个生产网站采集整理<strong>200+条</strong>用户反馈数据</li>
+                                        <li>开展<strong>15+场</strong>深度用户访谈，主持<strong>8场</strong>有引导的可用性测试，识别<strong>20+个</strong>关键缺陷，附复现步骤与代码层修复建议</li>
+                                        <li>依据 <strong>WCAG 2.1</strong> 标准对所有网站进行无障碍评估，涵盖语义HTML、ARIA标签、键盘导航、色彩对比度及认知负荷</li>
+                                        <li>撰写<strong>30页</strong>数据驱动的无障碍评估报告，提出12项优先级建议，被开发团队全部采纳</li>
+                                        <li>与跨职能团队协作优化导航结构，用户任务完成率实现可量化的<strong>35%提升</strong></li>
+                                        <li>联合撰写包容性设计标准文档，在组织内推广应用；向技术及非技术利益相关方汇报研究成果</li>
                                     </ul>
                                 </div>
                             </div>
                         </section>
 
+                        <!-- 项目经历 -->
                         <section class="cv-section" id="projects">
                             <h2 class="section-title">🚀 项目经历</h2>
                             <div class="section-content">
                                 <div class="row project-gallery">
                                     <div class="col-md-6 col-lg-3">
-                                        <div class="project-card" data-project="uno">
-                                            <div class="project-icon">
-                                                <i class="fas fa-gamepad"></i>
-                                            </div>
-                                            <h3>UNO卡牌游戏Java系统</h3>
-                                            <p class="project-preview">设计并实现卡牌类及核心游戏逻辑，代码量达1500+行。</p>
+                                        <div class="project-card" data-project="news">
+                                            <div class="project-icon"><i class="fas fa-newspaper"></i></div>
+                                            <h3>全栈新闻管理Web系统</h3>
+                                            <p class="project-preview">React · TypeScript · Node.js · MySQL · REST API</p>
                                             <button class="btn btn-outline-primary btn-sm project-details-btn">查看详情</button>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-3">
-                                        <div class="project-card" data-project="news">
-                                            <div class="project-icon">
-                                                <i class="fas fa-newspaper"></i>
-                                            </div>
-                                            <h3>新闻管理页面HTML系统</h3>
-                                            <p class="project-preview">负责前端架构设计，页面加载速度提升20%。</p>
+                                        <div class="project-card" data-project="uno">
+                                            <div class="project-icon"><i class="fas fa-gamepad"></i></div>
+                                            <h3>UNO卡牌游戏引擎</h3>
+                                            <p class="project-preview">Java · OOP · 设计模式 · TDD · JUnit</p>
                                             <button class="btn btn-outline-primary btn-sm project-details-btn">查看详情</button>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-3">
                                         <div class="project-card" data-project="plant">
-                                            <div class="project-icon">
-                                                <i class="fas fa-leaf"></i>
-                                            </div>
-                                            <h3>植物识别Android系统</h3>
-                                            <p class="project-preview">担任产品经理，识别准确率达85%。</p>
+                                            <div class="project-icon"><i class="fas fa-leaf"></i></div>
+                                            <h3>植物识别Android应用</h3>
+                                            <p class="project-preview">Android Studio · Java · REST API · ML集成</p>
                                             <button class="btn btn-outline-primary btn-sm project-details-btn">查看详情</button>
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-lg-3">
                                         <div class="project-card" data-project="maze">
-                                            <div class="project-icon">
-                                                <i class="fas fa-puzzle-piece"></i>
-                                            </div>
-                                            <h3>迷宫游戏Unity系统</h3>
-                                            <p class="project-preview">开发游戏道具功能，用户留存率提升40%。</p>
+                                            <div class="project-icon"><i class="fas fa-puzzle-piece"></i></div>
+                                            <h3>3D迷宫游戏</h3>
+                                            <p class="project-preview">Unity · C# · Blender · 组件化架构</p>
                                             <button class="btn btn-outline-primary btn-sm project-details-btn">查看详情</button>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <!-- Project Details Modal -->
+
                                 <div class="modal fade" id="projectModalCn" tabindex="-1" aria-labelledby="projectModalLabelCn" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
@@ -188,42 +186,51 @@
                                                 <h5 class="modal-title" id="projectModalLabelCn">项目详情</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
-                                            <div class="modal-body" id="projectModalBodyCn">
-                                                <!-- Project details will be loaded here -->
-                                            </div>
+                                            <div class="modal-body" id="projectModalBodyCn"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
 
+                        <!-- 技能特长 -->
                         <section class="cv-section" id="skills">
                             <h2 class="section-title">🛠 技能特长</h2>
                             <div class="section-content">
                                 <div class="skills-container">
                                     <div class="skill-category">
-                                        <h3>💻 编程语言</h3>
+                                        <h3>⚡ 编程语言</h3>
                                         <div class="skill-tags">
+                                            <span class="skill-tag">TypeScript</span>
+                                            <span class="skill-tag">JavaScript (ES6+)</span>
                                             <span class="skill-tag">Java</span>
-                                            <span class="skill-tag">C/C++</span>
+                                            <span class="skill-tag">C#</span>
                                             <span class="skill-tag">Python</span>
+                                            <span class="skill-tag">C / C++</span>
                                             <span class="skill-tag">SQL</span>
                                         </div>
                                     </div>
                                     <div class="skill-category">
                                         <h3>🌐 前端技术</h3>
                                         <div class="skill-tags">
-                                            <span class="skill-tag">HTML</span>
-                                            <span class="skill-tag">CSS</span>
-                                            <span class="skill-tag">JavaScript</span>
+                                            <span class="skill-tag">React</span>
+                                            <span class="skill-tag">HTML5</span>
+                                            <span class="skill-tag">CSS3</span>
+                                            <span class="skill-tag">Bootstrap</span>
+                                            <span class="skill-tag">Material-UI</span>
+                                            <span class="skill-tag">DOM操作</span>
+                                            <span class="skill-tag">响应式设计</span>
+                                            <span class="skill-tag">WCAG 2.1无障碍</span>
                                         </div>
                                     </div>
                                     <div class="skill-category">
-                                        <h3>🔧 框架与工具</h3>
+                                        <h3>🔧 后端与API</h3>
                                         <div class="skill-tags">
-                                            <span class="skill-tag">Unity</span>
-                                            <span class="skill-tag">Android Studio</span>
-                                            <span class="skill-tag">Git</span>
+                                            <span class="skill-tag">Node.js</span>
+                                            <span class="skill-tag">ASP.NET Core</span>
+                                            <span class="skill-tag">REST API设计</span>
+                                            <span class="skill-tag">MVC架构</span>
+                                            <span class="skill-tag">事件驱动模式</span>
                                         </div>
                                     </div>
                                     <div class="skill-category">
@@ -231,27 +238,88 @@
                                         <div class="skill-tags">
                                             <span class="skill-tag">MySQL</span>
                                             <span class="skill-tag">SQL Server</span>
+                                            <span class="skill-tag">数据库设计</span>
+                                            <span class="skill-tag">查询优化</span>
                                         </div>
                                     </div>
                                     <div class="skill-category">
-                                        <h3>📊 办公软件</h3>
+                                        <h3>📊 数据与分析</h3>
                                         <div class="skill-tags">
-                                            <span class="skill-tag">PowerPoint</span>
-                                            <span class="skill-tag">Excel</span>
-                                            <span class="skill-tag">Word（熟练）</span>
+                                            <span class="skill-tag">Python（Pandas、NumPy、Matplotlib）</span>
+                                            <span class="skill-tag">Excel（高级）</span>
+                                            <span class="skill-tag">数据采集框架设计</span>
+                                            <span class="skill-tag">趋势分析</span>
+                                            <span class="skill-tag">KPI报告</span>
+                                            <span class="skill-tag">仪表板开发</span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-category">
+                                        <h3>🔨 工具与DevOps</h3>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag">Git / GitHub</span>
+                                            <span class="skill-tag">Azure DevOps</span>
+                                            <span class="skill-tag">CI/CD流水线</span>
+                                            <span class="skill-tag">Agile / Scrum</span>
+                                            <span class="skill-tag">Unity</span>
+                                            <span class="skill-tag">Android Studio</span>
+                                            <span class="skill-tag">Figma</span>
+                                            <span class="skill-tag">Linux（Ubuntu）</span>
+                                        </div>
+                                    </div>
+                                    <div class="skill-category">
+                                        <h3>🎨 UX与用户研究</h3>
+                                        <div class="skill-tags">
+                                            <span class="skill-tag">用户访谈</span>
+                                            <span class="skill-tag">可用性测试</span>
+                                            <span class="skill-tag">用户故事</span>
+                                            <span class="skill-tag">包容性设计</span>
+                                            <span class="skill-tag">利益相关方汇报</span>
                                         </div>
                                     </div>
                                     <div class="skill-category">
                                         <h3>🌍 语言能力</h3>
                                         <div class="skill-tags">
-                                            <span class="skill-tag">英语（六级、雅思6.5）</span>
+                                            <span class="skill-tag">英语（雅思6.5）</span>
                                             <span class="skill-tag">普通话（母语）</span>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </section>
+
+                        <!-- 核心优势 -->
+                        <section class="cv-section" id="key-strengths">
+                            <h2 class="section-title">⭐ 核心优势</h2>
+                            <div class="section-content">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="strength-item p-3 rounded border h-100">
+                                            <h5>🏗 全栈工程能力</h5>
+                                            <p class="mb-0 text-muted">覆盖Web、移动端及游戏平台的端到端开发能力，扎实的OOP、SOLID原则与TDD实践。</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="strength-item p-3 rounded border h-100">
+                                            <h5>📊 数据驱动的问题解决</h5>
+                                            <p class="mb-0 text-muted">有设计数据采集框架、开展比较分析及产出推动可量化成果的循证报告的实践经验。</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="strength-item p-3 rounded border h-100">
+                                            <h5>♿ 无障碍与包容性设计</h5>
+                                            <p class="mb-0 text-muted">具有真实用户场景下的WCAG 2.1评估实践经验，致力于让技术为所有人服务。</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="strength-item p-3 rounded border h-100">
+                                            <h5>🤝 跨文化沟通协作</h5>
+                                            <p class="mb-0 text-muted">能将技术发现转化为清晰可行的洞察，适应不同文化背景下的技术与非技术受众沟通。</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </section>
+
                     </div>
                 </div>
             </div>
@@ -259,18 +327,22 @@
 
         <footer class="footer">
             <div class="container text-center">
-                <p>&copy; 李天宇 – 版权所有</p>
-                <p class="mt-2">感谢您的阅读与考虑</p>
+                <p class="mb-1">&copy; 李天宇 — 版权所有</p>
+                <p class="mb-1">
+                    <a href="https://www.linkedin.com/in/tianyu-li-7a562b31b" target="_blank" rel="noopener" class="text-white me-3">
+                        <i class="fab fa-linkedin me-1"></i>LinkedIn
+                    </a>
+                    <a href="https://github.com/543808706" target="_blank" rel="noopener" class="text-white">
+                        <i class="fab fa-github me-1"></i>GitHub
+                    </a>
+                </p>
+                <p class="mb-0 text-white-50 small">感谢您的阅读与考虑</p>
             </div>
         </footer>
     </div>
 
-    <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Custom JS -->
     <script src="js/index.js"></script>
 </body>
-
 </html>
